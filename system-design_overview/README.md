@@ -233,21 +233,78 @@ Here, I’ve explained various communication protocols.
 
 # Approaching System Design Interview Questions
 
+You’ve learned most system design concepts in this system design primer guide.
+
+Now, let’s focus on how to solve the [system design questions](https://www.designgurus.io/blog/url-shortening) with step by step approach.
+
 ## Step-by-step Guide
 
 ### Requirements clarification
 
+There can be two types of requirements: **function requirements** and **non-function requirements**.
+
+- **Function requirements:** The functional requirements are the requirements in the application with which the user interacts. For example, _authentication, navigation, payment services integration, etc_.
+
+- **Non-function requirements:** The non-functional requirements are the requirements to improve the application's capabilities. For example, _high availability, scalability, consistency, low latency, high throughput, etc., are the non-functional requirements_.
+
+You should move on to the next step according to the application's requirements.
+
 ### Estimation of resources
+
+The next step is deciding what kind of resources you should use to build the application.
+
+For example, while selecting the resources for the server, you should keep in mind how how many requests it will receive per day or second.
+
+Furthermore, you are also required to decide how much data you require to store in the database.
 
 ### System interface definition
 
+The third step is designing the system interface. For example, defining the API endpoints and what to expect from each API endpoint.
+
+Let's look at the example of the sample API.
+
+```
+sendNotification(userId, message, …);
+```
+
 ### Defining Data model
+
+The next important part is selecting a database for the application.
+
+If you need to store the structured data and tables are pre-determined, you can use the relational database. For storing the unstructured data, you should use NoSQL databases like MongoDB.
+
+If you are building social media applications like Facebook or Twitter, you can easily use Graph databases to manage many-to-many relationships.
 
 ### High-level design
 
+The next step is designing the high-level components. You can’t design the system for the whole application in a single go. So, you need to go step-by-step.
+
+In this step, you need to decide how you will connect the components of the system with each other. For example, connecting the server with the database, connecting the server with the client, and integrating the third-party tools with the applications.
+
+In this step, you can fulfill the functional requirements of the application.
+
 ### Detailed design
 
+After creating the basic design of the application, you need to improve the system design. You need to analyze the system to fulfill the non-functional requirements.
+
+You can analyze it as given below.
+
+- How to use caching to improve the performance of the application?
+- How do we scale the application via load balancing?
+- Should you use the CDN for caching, or are cookies enough?
+- How would you handle the failure of the application?
+- Should you distribute the data across multiple databases?
+- How will you replicate the database?
+
 ### Identifying and resolving bottlenecks
+
+At last, you should identify the bottlenecks in your system design and discuss the solutions to resolve them with the interviewer.
+
+The sample bottlenecks can be shown below.
+
+- Can the system fail in any scenario? If yes, how will you handle it?
+- How do you monitor the performance of the system and issues in the system?
+- Do you have enough replicas of the database to handle the failure?
 
 ## Sample System Design Interview Questions and Solutions
 
