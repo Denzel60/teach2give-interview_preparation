@@ -310,7 +310,7 @@ The sample bottlenecks can be shown below.
 
 Let’s look at the below [system design interview](https://www.designgurus.io/blog/step-by-step-guide) questions. So you can easily crack the interviews for your dream job.
 
-## How would you design a [URL Shortening](https://www.designgurus.io/blog/url-shortening) service similar to TinyURL?
+1. ## How would you design a [URL Shortening](https://www.designgurus.io/blog/url-shortening) service similar to TinyURL?
 
 The URL shortening service allows users to shorten the long URLs. So users can use the short URL instead of the long URL, and the fun fact is that the short URL works the same as the long URL.
 
@@ -332,7 +332,7 @@ You can discuss the below stuff.
 - You can discuss how you will prepare a table for relational database to map long URLs with short URLs.
 - The critical point is how to shorten the long URL by providing a unique id to each shortened URL.
 
-## How would you design a Web Crawler?
+2. ## How would you design a Web Crawler?
 
 The Web crawlers allow to extract the information from different web pages.
 
@@ -342,7 +342,7 @@ You can discuss how you open multiple web pages in the web browser. Also, it is 
 
 You can also discuss changing the web pages and domains dynamically.
 
-## How would you design Facebook and Instagram?
+3. ## How would you design Facebook and Instagram?
 
 Here, you are required to build a social media application.
 
@@ -365,7 +365,7 @@ Here, you are required to build a social media application.
 - Discuss database replication to handle failures.
 - Discuss data caching and load balancing.
 
-## How would you design the API rate limit?
+4. ## How would you design the API rate limit?
 
 The API rate limiter allows one to make a particular number of API requests in a specified time. If the API request increases, it blocks the request for some time.
 
