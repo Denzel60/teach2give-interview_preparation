@@ -308,18 +308,89 @@ The sample bottlenecks can be shown below.
 
 ## Sample System Design Interview Questions and Solutions
 
-## How would you design a URL Shortening service similar to TinyURL?
+Let’s look at the below [system design interview](https://www.designgurus.io/blog/step-by-step-guide) questions. So you can easily crack the interviews for your dream job.
+
+## How would you design a [URL Shortening](https://www.designgurus.io/blog/url-shortening) service similar to TinyURL?
+
+The URL shortening service allows users to shorten the long URLs. So users can use the short URL instead of the long URL, and the fun fact is that the short URL works the same as the long URL.
 
 ### Requirements clarification:
 
+- When you give a long URL as an input, it should return the shortened URL.
+- When you click the shortened URL, it should redirect to the original URL.
+- Consider 500 requests per second, and make scalable accordingly.
+- Delete the expired URLs.
+- Track the number of clicks on the URL.
+
 ### Approach
+
+You can discuss the below stuff.
+
+- How you will use the REST API to communicate with the server.
+- How will you handle the 500 requests every second via load balancing?
+- You can discuss using the relational database, as it doesn’t require horizontal scaling.
+- You can discuss how you will prepare a table for relational database to map long URLs with short URLs.
+- The critical point is how to shorten the long URL by providing a unique id to each shortened URL.
 
 ## How would you design a Web Crawler?
 
+The Web crawlers allow to extract the information from different web pages.
+
+### Approach:
+
+You can discuss how you open multiple web pages in the web browser. Also, it is important to know how many browser windows you will open simultaneously to crawl multiple web pages. Let’s say if you allow us to open 1000 browser windows together, the device may run out of memory.
+
+You can also discuss changing the web pages and domains dynamically.
+
 ## How would you design Facebook and Instagram?
+
+Here, you are required to build a social media application.
+
+### Requirements:
+
+- User signup/sign-in
+- Allowing users to publish posts and short videos
+- Followers and following features
+- Direct messaging
+- Showing the latest posts from their followers
+- Showing trending posts in the feed
+
+### Approach:
+
+- Talk about how you will handle the relationship between users in the database.
+- Talk about how you will implement the chat features. You may talk about integrating third-party chatting applications.
+- Furthermore, you can discuss how you will implement the authentication.
+- Discuss algorithms to show trending or latest posts.
+- Talk about handling user’s data in the database, as users will publish multiple posts.
+- Discuss database replication to handle failures.
+- Discuss data caching and load balancing.
 
 ## How would you design the API rate limit?
 
+The API rate limiter allows one to make a particular number of API requests in a specified time. If the API request increases, it blocks the request for some time.
+
+### Approach:
+
+- Talk about rate-limit matrics. How many maximum requests do you want to allow per second?
+- Talk about how you will handle multiple requests simultaneously.
+- Talk about how you can keep count of requests. You may use the IP address received in the request header.
+
 # Next Steps: Resources for Further Learning
 
+The final step is how anyone can further prepare for the system design interview.
+
+Here, I’ve listed some of the best system design courses in which you can enroll and start the preparation.
+
 ## System Design Interview Roadmap By Design Guru
+
+The [system design interview roadmap](https://www.designgurus.io/path/system-design-interview-playbook) is prepared by the team of experts at DesignGurus.io. It covers the fundamentals and advanced concepts of the system design in detail. The course contains a total 59 chapters and 103 lessons. Each lesson covers a wide information about a particular topic.
+
+I’ve covered all the valuable concepts of system design in this system design primer guide. Also, you got an idea of what kind of questions can be asked in the system design interview. Here, we suggested a few resources for the interview preparation. However, you can also follow some books or good resources from the internet.
+
+Keep learning more about system design interviews:
+
+1. [System Design Interview Survival Guide (2024): Preparation Strategies and Practical Tips](https://levelup.gitconnected.com/system-design-interview-survival-guide-2023-preparation-strategies-and-practical-tips-ba9314e6b9e3)
+
+2. [The Complete Guide to Ace the System Design Interview](https://www.designgurus.io/blog/complete-guide-sys-design)
+
+3. [Ace Your System Design Interview with 7 Must-Read Papers in 2024](https://www.designgurus.io/blog/sys-design-papers)
